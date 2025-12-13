@@ -17,7 +17,7 @@ Scent4You is a deep learning-based perfume recommendation system. By building No
 | **Resources** | | |
 | `data/` | Datasets | Cleaned perfume data (.csv) and embedding dictionaries. |
 | `models/` | Model weights | Pretrained PyTorch models (.pth). |
-| `html/`, `img/` | Static assets | Generated interactive charts and images. |
+| `html/`, `img/`,`PCA/` ,`TSNE/`| Static assets | Generated interactive charts and images. |
 
 ## Technical Architecture
 1. Note Embedding (NEM): Fine-tuned bert-base-chinese converts note names to 768-dimensional vectors; after convergence over 10 epochs, the epoch-9 model is used to generate embeddings.
