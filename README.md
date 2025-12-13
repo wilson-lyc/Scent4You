@@ -2,9 +2,14 @@
 
 Scent4You is a deep learning-based perfume recommendation system. By building Note Embedding (NEM) and Perfume Embedding (PEM) models, we map discrete fragrance ingredients and complex perfume structures into continuous vector spaces. This enables the system to understand concrete notes like "rose" and "sandalwood" and capture abstract olfactory semantics such as "woody" and "fresh," providing precise recommendations from natural language descriptions.
 
+## Overview
+- Project Goal: Convert users’ preferred top/middle/base notes into vector representations and retrieve the most similar Top-10 perfumes currently available for sale.
+- Input/Output: Input is Chinese note terms (top/middle/base); output is a candidate perfume list with similarity scores.
+- Recommendation Strategies: Supports a weighted-average strategy (0.3/0.4/0.3) and a PEM-based neural network strategy.
+
 ## Project Structure
 
- Folder/File | Description | Purpose |
+| Folder/File | Description | Purpose |
 | :--- | :--- | :--- |
 | **Core** | | |
 | `Scent4You.ipynb` | Main entry | Integrates data cleaning, visualization, and recommendation demos. |
@@ -17,7 +22,14 @@ Scent4You is a deep learning-based perfume recommendation system. By building No
 | **Resources** | | |
 | `data/` | Datasets | Cleaned perfume data (.csv) and embedding dictionaries. |
 | `models/` | Model weights | Pretrained PyTorch models (.pth). |
-| `html/`, `img/`,`PCA/` ,`TSNE/`| Static assets | Generated interactive charts and images. |
+| `html/`, `img/` ,`PCA/` ,`TSNE/`| Static assets | Generated interactive charts and images. |
+
+## Features
+- Personalized recommendations: Generate Top-10 perfume suggestions based on top/middle/base note preferences.
+- Dual strategies: Weighted average (0.3/0.4/0.3) and PEM-based neural network.
+- In-catalog retrieval: Cosine similarity search over the perfume embedding dictionary.
+- Visualization & analysis: Market and data analysis notebooks (e.g., `vs.ipynb`).
+- Chinese semantic support: `bert-base-chinese` for Chinese note text embeddings (NEM).
 
 ## Technical Architecture
 1. Note Embedding (NEM): Fine-tuned bert-base-chinese converts note names to 768-dimensional vectors; after convergence over 10 epochs, the epoch-9 model is used to generate embeddings.
@@ -45,7 +57,7 @@ Input fragrance text is converted to note embeddings via NEM. Top/middle/base no
 2. Running the Project: Use Jupyter as the main interface.
      - Start Jupyter Lab:
          ```bash
-         jupyter notebook
+         jupyter lab
          ```
      - Open Scent4You.ipynb (main entry) and execute cells in order.
      - Note: The Data Collection section contains web crawling code (time-consuming and network-dependent). By default, skip it and use preprocessed data in the data/ directory.
@@ -61,4 +73,10 @@ Input fragrance text is converted to note embeddings via NEM. Top/middle/base no
      rc_perfumes = get_recommended_perfumes(like_top_notes, like_mid_notes, like_base_notes, top_k=10)
      display(rc_perfumes)
      ```
+
+## Limitations & Future Work
+- Semantic ambiguity: Homonymous or near-synonym notes may cause embedding confusion.
+- Data coverage: Limited coverage of perfumes currently available for sale.
+- Cross-language mapping: Currently focused on Chinese; cross-language note mapping requires further improvement.
+- Future directions: Incorporate user profiling and personalized weight learning, cold-start strategies, and broader in-catalog data sources.
 
