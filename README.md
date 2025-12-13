@@ -45,7 +45,7 @@ Input fragrance text is converted to note embeddings via NEM. Top/middle/base no
 2. Running the Project: Use Jupyter as the main interface.
      - Start Jupyter Lab:
          ```bash
-         jupyter lab
+         jupyter notebook
          ```
      - Open Scent4You.ipynb (main entry) and execute cells in order.
      - Note: The Data Collection section contains web crawling code (time-consuming and network-dependent). By default, skip it and use preprocessed data in the data/ directory.
