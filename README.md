@@ -108,3 +108,6 @@ display(rc_perfumes)
 - Data coverage: Limited coverage of perfumes currently available for sale.
 - Cross-language mapping: Currently focused on Chinese; cross-language note mapping requires further improvement.
 - Future directions: Incorporate user profiling and personalized weight learning, cold-start strategies, and broader in-catalog data sources.
+
+## Acknowledgments
+This project employed AI tools, including [DeepSeek](https://chat.deepseek.com/), [Doubao](https://www.doubao.com/chat), [Microsoft Copilot](https://copilot.microsoft.com/chats), [ChatGPT](https://chatgpt.com/) and [Qwen](https://chat.qwen.ai/) to assist in the generation of code and the preparation of the report. All AI‑generated content was carefully reviewed, validated, and integrated by our group, and has been adopted as part of the final outcomes of this study.
