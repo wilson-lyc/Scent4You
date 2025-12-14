@@ -1,6 +1,6 @@
 # Scent4You: A perfume recommendation system
 
-Scent4You is a deep learning-based perfume recommendation system. By building Scent Note Embedding (NEM) and Perfume Embedding Model (PEM), we map discrete fragrance ingredients and complex perfume structures into continuous vector spaces. This enables the system to understand concrete notes like "rose" and "sandalwood" and capture abstract olfactory semantics such as "woody" and "fresh," providing precise recommendations from natural language descriptions.
+Scent4You is a neural network-based perfume recommendation system. By building Scent Note Embedding (NEM) and Perfume Embedding Model (PEM), we map discrete fragrance ingredients and complex perfume structures into continuous vector spaces. This enables the system to understand concrete notes like "rose" and "sandalwood" and capture abstract olfactory semantics such as "woody" and "fresh," providing precise recommendations from natural language descriptions.
 
 ## Overview
 ![Overview](img/overview.png)
