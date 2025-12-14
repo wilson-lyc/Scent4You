@@ -42,20 +42,23 @@ Scent4You is a deep learning-based perfume recommendation system. By building Sc
 ![Data Pipeline](img/data_pipeline_emebedding.png)
 Input fragrance text is converted to note embeddings via NEM. Top/middle/base notes are mapped to vectors and fed into PEM for feature extraction and attention aggregation. Multi-head attention fuses inter-layer interactions into a unified perfume embedding used for classification and similarity search.
 
-**Note Embedding (NEM)**: Fine-tuned bert-base-chinese converts note names to 768-dimensional vectors; after convergence over 10 epochs, the epoch-9 model is used to generate embeddings.
+### Note Embedding (NEM)
+Fine-tuned bert-base-chinese converts note names to 768-dimensional vectors; after convergence over 10 epochs, the epoch-9 model is used to generate embeddings.
 
 ![Weighted Average Recommendation Flow](img/note_embedding_model_structure.png)
 
-**Perfume Embedding (PEM)**: A hierarchical network (top/middle/base sub-networks, attention aggregation, and multi-head attention) produces a 128-dimensional perfume embedding for classification and recommendation.
+### Perfume Embedding (PEM)
+A hierarchical network (top/middle/base sub-networks, attention aggregation, and multi-head attention) produces a 128-dimensional perfume embedding for classification and recommendation.
 
 ![PEM Recommendation Flow](img/perfume_embedding_modle_structure.png)
 
-**Recommendation**: Use cosine similarity to match vectorized perfumes with vectorized user requirements; implementations include a weighted average (top/middle/base weights 0.3/0.4/0.3) or aneural network-based PEM.
+### Recommendation
+Use cosine similarity to match vectorized perfumes with vectorized user requirements; implementations include a weighted average (top/middle/base weights 0.3/0.4/0.3) or aneural network-based PEM.
 
-Weighted Average Method:
+#### Weighted Average Method
 ![](img/data_pipeline_recommendation_wa.png)
 
-Neural Network Method:
+#### Neural Network Method
 ![](img/data_pipeline_recommendation_nn.png)
 
 ## Quick Start
