@@ -4,3 +4,4 @@ models/**.pth
 bert-base-chinese
 recommended_perfumes_nn.csv
 recommended_perfumes_wa.csv
+train_loss.ipynb
