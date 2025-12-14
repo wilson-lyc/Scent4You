@@ -1,1 +1,2 @@
-The model was too large to upload successfully. Please visit: xxxx to download the model to this folder. You should ensure that the NEM.pth and PEM.pth files are present in this folder before running the code.
+# Kind Tips
+Please download `NEM.pth` and `PEM.pth` from [Google Drive](https://drive.google.com/drive/folders/188M7Jm3XoOrvLZH5gR6HTlOki1tPprWm?usp=sharing) to this folder. You should ensure that the `NEM.pth` and `PEM.pth` files are present in this folder before running the code.

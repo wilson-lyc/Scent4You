@@ -75,7 +75,7 @@ pip install torch transformers scikit-learn pandas numpy matplotlib seaborn plot
 ```
 
 ### Download Models
-Download NEM.pth and PEM.pth from link xxxxx and place them in the models folder.
+Download `NEM.pth` and `PEM.pth` from [Google Drive](https://drive.google.com/drive/folders/188M7Jm3XoOrvLZH5gR6HTlOki1tPprWm?usp=sharing) and place them in the [models](models) folder.
 
 ### Start JupyterLab
 ```shell
